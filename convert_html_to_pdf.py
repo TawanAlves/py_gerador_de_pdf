@@ -33,22 +33,7 @@ class PDF:
             css_content = f.read()
         data_with_css = {**data, 'style': css_content}
         return jinja_template.render(**data_with_css)
-
-# pdf = PDF()
-# try:
-#     input_folder = os.path.join(os.getcwd(), 'input')
-#     output_folder = os.path.join(os.getcwd(), 'output')
-#     pdf.create_pdf(
-#         data={},
-#         template_file='./input/index.html',
-#         output_file='./output/meu_arquivo.pdf'
-#     )
-#     with open('./output/meu_arquivo.pdf', 'rb') as f:
-#         print("O arquivo foi gerado com sucesso!")
-# except OSError:
-#     print("Houve um problema ao gerar o arquivo.")
-# except Exception as e:
-#     print(f"Ocorreu um erro: {e}")
+   print(f"Ocorreu um erro: {e}")
 
 
 pdf = PDF()
